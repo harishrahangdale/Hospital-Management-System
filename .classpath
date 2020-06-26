@@ -15,5 +15,7 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="lib" path="C:/Users/haris/Documents/GitHub/Hospital-Management-System/WebContent/WEB-INF/lib/mysql-connector-java-8.0.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/haris/Documents/GitHub/Hospital-Management-System/WebContent/WEB-INF/lib/jsp-api.jar"/>
+	<classpathentry kind="lib" path="C:/Users/haris/Documents/GitHub/Hospital-Management-System/WebContent/WEB-INF/lib/servlet-api.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
