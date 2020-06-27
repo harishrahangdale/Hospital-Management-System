@@ -19,7 +19,7 @@ public class LoginDao
         
         String url="jdbc:mysql://jrfc0k4rzsfbvfvd:drsg5a1ab9yoxtj4@gp96xszpzlqupw4k.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/ikgk6e5x3n5d30pm"; //database connection url string
         String uname="jrfc0k4rzsfbvfvd"; //database username
-        String pass="drsg5a1ab9yoxtj4"; //database password
+        String pass="drsg5a1ab9yoxtj4"; //database pass
         
         try
         {
