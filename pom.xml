@@ -21,9 +21,9 @@
 	    <artifactId>maven-dependency-plugin</artifactId>
 	    <version>3.0.1</version>
 	    <configuration>
-                <source>1.8</source>
-                <target>1.8</target>
-            </configuration>
+                <source>8</source>
+                <target>8</target>
+        </configuration>
 	    <executions>
 		    <execution>
 			    <id>copy-dependencies</id>
@@ -36,6 +36,8 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.0</version>
         <configuration>
+          <source>8</source>
+          <target>8</target>
           <release>13</release>
         </configuration>
       </plugin>
