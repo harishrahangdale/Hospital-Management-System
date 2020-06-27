@@ -17,9 +17,9 @@ public class LoginDao
         String dbusername="";  //create two variable for use next process
         String dbpassword="";
         
-        String url="jdbc:mysql://localhost:3306/hms_tcs"; //database connection url string
-        String uname="root"; //database username
-        String pass="mysql"; //database password
+        String url="jdbc:mysql://jrfc0k4rzsfbvfvd:drsg5a1ab9yoxtj4@gp96xszpzlqupw4k.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/ikgk6e5x3n5d30pm"; //database connection url string
+        String uname="jrfc0k4rzsfbvfvd"; //database username
+        String pass="drsg5a1ab9yoxtj4"; //database password
         
         try
         {
