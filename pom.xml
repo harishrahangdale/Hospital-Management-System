@@ -12,9 +12,9 @@
         <version>3.8.0</version>
         <configuration>
           <release>13</release>
-          <processTypes>
-          <web>java $JAVA_OPTS -cp target/classes:target/dependency/* Main</web>
-  </processTypes>
+          <!-- <processTypes>
+            <web>java $JAVA_OPTS -cp target/classes:target/dependency/* Main</web>
+          </processTypes> -->
         </configuration>
       </plugin>
       <plugin>
