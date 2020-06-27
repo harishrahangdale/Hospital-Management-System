@@ -12,7 +12,7 @@ try
 {
 	Class.forName("com.mysql.jdbc.Driver"); //load driver
 	
-	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/hms","root","admin"); //create connection
+	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/hms_tcs","root","admin"); //create connection
 	
 	if(request.getParameter("btn_login")!=null) //check login button click event not null
 	{
@@ -25,7 +25,7 @@ try
 		
 		PreparedStatement pstmt=null; //create statement
 		
-		pstmt=con.prepareStatement("select * from user where email=? AND password=?"); //sql select query 
+		pstmt=con.prepareStatement("select * from users where username=? AND password=?"); //sql select query 
 		pstmt.setString(1,email);
 		pstmt.setString(2,password);
 		
