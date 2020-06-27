@@ -1,7 +1,7 @@
 <%
     if(session.getAttribute("login")!=null)
     {
-        response.sendRedirect("welcome.jsp"); //session login user not back to index.jsp page or not type direct
+        response.sendRedirect("welcome.jsp"); //session login user not back to index.jsp page or not type directto url
     }
 %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
