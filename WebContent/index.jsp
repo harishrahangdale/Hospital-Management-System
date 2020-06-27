@@ -27,7 +27,7 @@
             }
             if (password.value == null || password.value == "") //check password textbox not blank
             {
-		window.alert("please enter password ?"); //alert message
+		window.alert("Please Enter Password!"); //alert message
 		password.style.background = '#f08080'; //set textbox color
 		password.focus();
 		return false;
