@@ -145,7 +145,7 @@ p {
         <p class="title">Developer</p>
         <p>DT20195556833</p>
         <p>bhavyapreeti99@gmail.com</p>
-        <p><button class="button" onclick="location.href='https://www.linkedin.com/in//'">Contact</button></p>
+        <p><button class="button" onclick="location.href='https://www.linkedin.com/in/bhavya99/'">Contact</button></p>
       </div>
     </div>
   </div>
@@ -160,7 +160,7 @@ p {
         <p class="title">Developer</p>
         <p>DT20195590416</p>
         <p>ruchhinagpal@gmail.com</p>
-        <p><button class="button" onclick="location.href='https://www.linkedin.com/in/harishrahangdale/'">Contact</button></p>
+        <p><button class="button" onclick="location.href='https://www.linkedin.com/'">Contact</button></p>
       </div>
     </div>
   </div>
@@ -173,7 +173,7 @@ p {
         <p class="title">Developer</p>
         <p>DTXXXXXXXXXXX</p>
         <p>vandankarwa@gmail.com</p>
-        <p><button class="button" onclick="location.href='https://www.linkedin.com/in//'">Contact</button></p>
+        <p><button class="button" onclick="location.href='https://www.linkedin.com/in/vandan-karwa-b8739a169/'">Contact</button></p>
       </div>
     </div>
   </div>
