@@ -128,11 +128,11 @@ p {
     <div class="card">
       <img src="CSS and JS/images/male.png" alt="Harish Rahangdale" style="width:100%">
       <div class="container">
-        <h2>Harish Rahangdale</h2>
+        <h2>Bhavya Sinha</h2>
         <p class="title">Developer</p>
-        <p>DT20195543443</p>
-        <p>hsr.29978@gmail.com</p>
-        <p><button class="button" onclick="window.open('https://www.linkedin.com/in/harishrahangdale/','_blank')">Contact</button></p>
+        <p>DT20195556833</p>
+        <p>bhavyapreeti99@gmail.com</p>
+        <p><button class="button" onclick="window.open('https://www.linkedin.com/in/bhavya99/','_blank')">Contact</button></p>
       </div>
     </div>
   </div>
@@ -141,11 +141,11 @@ p {
     <div class="card">
       <img src="CSS and JS/images/female.png" alt="Bhavya" style="width:100%">
       <div class="container">
-        <h2>Bhavya Sinha</h2>
+        <h2>Ruchi Nagpal</h2>
         <p class="title">Developer</p>
-        <p>DT20195556833</p>
-        <p>bhavyapreeti99@gmail.com</p>
-        <p><button class="button" onclick="window.open('https://www.linkedin.com/in/bhavya99/','_blank')">Contact</button></p>
+        <p>DT20195590416</p>
+        <p>ruchhinagpal@gmail.com</p>
+        <p><button class="button" onclick="window.open('https://www.linkedin.com/in/ruchi-nagpal-1a58421aa/','_blank')">Contact</button></p>
       </div>
     </div>
   </div>
@@ -156,11 +156,11 @@ p {
     <div class="card">
       <img src="CSS and JS/images/female.png" alt="Ruchi Nagpal" style="width:100%">
       <div class="container">
-        <h2>Ruchi Nagpal</h2>
+        <h2>Harish Rahangdale</h2>
         <p class="title">Developer</p>
-        <p>DT20195590416</p>
-        <p>ruchhinagpal@gmail.com</p>
-        <p><button class="button" onclick="window.open('https://www.linkedin.com/in/ruchi-nagpal-1a58421aa/','_blank')">Contact</button></p>
+        <p>DT20195543443</p>
+        <p>hsr.29978@gmail.com</p>
+        <p><button class="button" onclick="window.open('https://www.linkedin.com/in/harishrahangdale/','_blank')">Contact</button></p>
       </div>
     </div>
   </div>
