@@ -141,7 +141,7 @@ p {
     <div class="card">
       <img src="CSS and JS/images/female.png" alt="Bhavya" style="width:100%">
       <div class="container">
-        <h2>Bhavya</h2>
+        <h2>Bhavya Sinha</h2>
         <p class="title">Developer</p>
         <p>DT20195556833</p>
         <p>bhavyapreeti99@gmail.com</p>
@@ -160,7 +160,7 @@ p {
         <p class="title">Developer</p>
         <p>DT20195590416</p>
         <p>ruchhinagpal@gmail.com</p>
-        <p><button class="button" onclick="location.href='https://www.linkedin.com/'">Contact</button></p>
+        <p><button class="button" onclick="location.href='https://www.linkedin.com/in/ruchi-nagpal-1a58421aa/'">Contact</button></p>
       </div>
     </div>
   </div>
@@ -171,7 +171,7 @@ p {
       <div class="container">
         <h2>Vandan Karwa</h2>
         <p class="title">Developer</p>
-        <p>DTXXXXXXXXXXX</p>
+        <p>CT20172285431</p>
         <p>vandankarwa@gmail.com</p>
         <p><button class="button" onclick="location.href='https://www.linkedin.com/in/vandan-karwa-b8739a169/'">Contact</button></p>
       </div>

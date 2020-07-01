@@ -143,7 +143,7 @@
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-10 p-b-54"
 				style="opacity: 0.99;">
 				<span class="login100-form-title"
-					style="font-size: 40px; color: #111d5e;">ABC Hospital
+					style="font-size: 40px; color: #A93226;">Hospital
 					Management System</span>
 				<div class="login100-pic js-tilt " data-tilt>
 					<img src="CSS and JS/images/img-01.png" width="300" height="275"
@@ -152,7 +152,7 @@
 				<br> <br>
 				<form autocomplete="off" class="login100-form validate-form">
 					<span class="login100-form-title"
-						style="font-size: 28px; color: green;">Login</span>
+						style="font-size: 28px; color: green;">LOGIN</span>
 
 					<div class="wrap-input100 validate-input"
 						data-validate="Enter a Valid Username">
