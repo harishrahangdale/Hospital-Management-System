@@ -151,8 +151,8 @@ $(document).ready(function() {
 </script>
 </head>
 <body
-	style="background-image: url('CSS and JS/images/other.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
 	<%@ include file="../adminDeskHeader.jsp"%>
+	style="background-image: url('CSS and JS/images/other.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
 	<div class="container-login100">
 		<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
 			<span class="login100-form-title"

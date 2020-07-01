@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@page import="com.abc.beans.User"%>
+<%@page import="com.hms.beans.User"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
