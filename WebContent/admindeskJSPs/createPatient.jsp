@@ -174,17 +174,19 @@ $(document).ready(function() {
 						id="patient_SSN" name="patient_SSN" maxLength="9"
 						placeholder="Enter the ssn..." /> <span class="focus-input100"></span>
 				</div>
-				<div class="form-group row">
-					<div class=" validate-input m-b-23 col-sm-6"
-						data-validate="Enter a Valid Age">
-						<span class="label-input100 ">Age</span> <input
-							class="input100 form-control" type="text" maxLength="3"
-							id="patient_age" name="patient_age"
-							placeholder="Enter the age..." />
+					<div class="form-group row">
+					<div class="col-sm-6">
+						<div class=" validate-input m-b-23"
+							data-validate="Enter a Valid Age">
+							<span class="label-input100 ">Age</span> <input
+								class="input100 form-control" type="text" maxLength="3"
+								id="patient_age" name="patient_age"
+								placeholder="Enter the age..." />
+						</div>
 					</div>
 
 					<div class=" validate-input m-b-23 col-sm-6"
-						data-validate="Select a valid room Type" id="div2">
+						data-validate="Select a valid Room Type" id="div2">
 						<span class="label-input100 ">Type Of Room</span> <select
 							id="type_of_room" name="type_of_room"
 							class="input100 form-control">
@@ -202,28 +204,33 @@ $(document).ready(function() {
 					<span class="focus-input100"></span>
 				</div>
 				<div class="form-group row">
-					<div class=" validate-input m-b-23 col-sm-6"
-						data-validate="Enter a Valid City">
-						<span class="label-input100">City</span> <input
-							class="input100 form-control" type="text" id="city" name="city"
-							placeholder="Enter the City..." />
+					<div class="col-sm-6">
+						<div class=" validate-input m-b-23"
+							data-validate="Enter a Valid City">
+							<span class="label-input100">City</span> <input
+								class="input100 form-control" type="text" id="city" name="city"
+								placeholder="Enter the City..." />
+						</div>
 					</div>
-
-					<div class=" validate-input m-b-23 col-sm-6"
-						data-validate="Enter a Valid State">
-						<span class="label-input100">State</span> <input
-							class="input100 form-control" type="text" id="state" name="state"
-							placeholder="Enter the State..." />
+					<div class="col-sm-6">
+						<div class=" validate-input m-b-23"
+							data-validate="Enter a Valid State">
+							<span class="label-input100">State</span> <input
+								class="input100 form-control" type="text" id="state"
+								name="state" placeholder="Enter the State..." />
+						</div>
 					</div>
 				</div>
 
 				<input type="hidden" id="action" name="action" value="createPatient" />
-				<div class="col-md-12 text-center">
-					<button type="reset" class="btn btn-primary active" id="reset">Reset</button>
-					&ensp; <input type="submit" class="btn btn-primary active"
-						id="submitForm" value="Create" />
-				</div>
 			</form>
+			<div class="col-md-12 text-center">
+				<button type="reset"
+					onclick="location.href='./AdminDeskController?action=createPatient'"
+					form="patientForm" class="btn btn-primary active" id="reset">Reset</button>
+				&ensp;
+				<button class="btn btn-primary active" id="submitForm">Create</button>
+			</div>
 		</div>
 	</div>
 
