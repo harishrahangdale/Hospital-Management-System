@@ -8,7 +8,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="CSS and JS/image/png"
-	href="CSS and JS/images/icons/favicon.ico" />
+	href="CSS and JS/images/icons/home.ico" />
 <link rel="stylesheet" type="text/css"
 	href="CSS and JS/vendor/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css"

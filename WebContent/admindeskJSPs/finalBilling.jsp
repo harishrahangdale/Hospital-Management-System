@@ -58,11 +58,9 @@
 				button : "Okay",
 			});
 		}
-
 		$("#reset").click(function() {
 			$("#id").val("");
 		});
-
 		"use strict";
 		//   [ Focus input ]
 		$('.input100').each(function() {
@@ -74,12 +72,9 @@
 				}
 			})
 		})
-
 		var input = $('.validate-input .input100');
-
 		$('#Form').on('submit', function(e) {
 			var check = true;
-
 			for (var i = 0; i < input.length; i++) {
 				if (validate(input[i]) == false) {
 					showValidate(input[i]);
@@ -88,33 +83,25 @@
 			}
 			return check;
 		});
-
 		$('.validate-form .input100').each(function() {
 			$(this).focus(function() {
 				hideValidate(this);
 			});
 		});
-
 		function validate(input) {
 			if ($(input).val().trim() == '')
 				return false;
 		}
-
 		function showValidate(input) {
 			var thisAlert = $(input).parent();
-
 			$(thisAlert).addClass('alert-validate');
 		}
-
 		function hideValidate(input) {
 			var thisAlert = $(input).parent();
-
 			$(thisAlert).removeClass('alert-validate');
 		}
-
 		function Validate() {
 			var thisAlert = this.parent();
-
 			$(thisAlert).addClass('alert-validate');
 		}
 	});
@@ -128,6 +115,8 @@
 			<c:when test="${actionType !='show'}">
 				<div class="container-login100">
 					<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+						<span class="login100-form-title"
+							style="font-size: 30px; color: crimson;">Final Billing</span><br />
 						<form autocomplete="off" class="login100-form validate-form "
 							id="Form" action="AdminDeskController" method="post">
 							<div class="wrap-input100 validate-input m-b-23"
@@ -142,7 +131,7 @@
 						</form>
 						<div class="col-md-12 text-center after-id">
 							<button class="btn btn-primary active" id="reset">Reset</button>
-							&ensp;
+
 							<button type="submit" form="Form" class="btn btn-primary active">Find
 								Patient</button>
 						</div>
@@ -165,6 +154,7 @@
 									<th>Age</th>
 									<th>Address</th>
 									<th>Date of Admission</th>
+									<th>Date of Discharge</th>
 									<th>Type of Room</th>
 									<th>Status</th>
 								</tr>
@@ -177,6 +167,7 @@
 									<td>${patient.getAddress()},${patient.getCity()},
 										${patient.getState()}</td>
 									<td>${patient.getPatient_date_of_admission()}</td>
+									<td>${todayDate}</td>
 									<td>${patient.getType_of_room()}</td>
 									<td>${patient.getStatus()}</td>
 								</tr>
@@ -256,18 +247,25 @@
 						<strong>Grand Total: Rs.${grandTotal}</strong>
 					</div>
 					<div class="col-md-12  text-center p-t-20 p-b-20">
-						<button class="btn btn-primary active" id="cancel">Back</button>
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<c:if test="${patient.getStatus() == 'ACTIVE'}">
-							<button type="submit" form="patientForm"
-								class="btn btn-primary active" id="confirm">Confirm</button>
-						</c:if>
 						<c:if test="${patient.getStatus() != 'ACTIVE'}">
 							<div class="d-flex justify-content-center after"
 								style="font-size: 25px;">
 								<strong>***Patient Discharged***</strong>
 							</div>
+							<div class="p-t-10 p-b-0">
+								<button class="btn btn-primary active" id="cancel">Back</button>
+							</div>
 						</c:if>
+
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<c:if test="${patient.getStatus() == 'ACTIVE'}">
+							<div class="col-md-12 text-center ">
+								<button class="btn btn-primary active" id="cancel">Back</button>
+								<button type="submit" form="patientForm"
+									class="btn btn-primary active" id="confirm">Confirm</button>
+							</div>
+						</c:if>
+
 					</div>
 					<form autocomplete="off" class="login100-form validate-form before"
 						id="patientForm" action="AdminDeskController" method="post">

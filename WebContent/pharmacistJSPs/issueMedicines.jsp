@@ -25,6 +25,9 @@
 <script type="text/javascript" src="CSS and JS/js/tether.min.js"></script>
 <script>
 	$(document).ready(function() {
+		$("#cancel").click(()=>{
+			window.location.replace("./PharmacistController?action=issueMedicines");
+		});
 		var msg = "" + '${msg}';
 		if (msg != "") {
 			if (msg == "success") {
@@ -70,11 +73,9 @@
 				button : "Okay",
 			});
 		}
-
 		$("#reset").click(function() {
 			$("#id").val("");
 		});
-
 		"use strict";
 		//   [ Focus input ]
 		$('.input100').each(function() {
@@ -86,12 +87,9 @@
 				}
 			})
 		})
-
 		var input = $('.validate-input .input100');
-
 		$('#Form').on('submit', function(e) {
 			var check = true;
-
 			for (var i = 0; i < input.length; i++) {
 				if (validate(input[i]) == false) {
 					showValidate(input[i]);
@@ -100,33 +98,25 @@
 			}
 			return check;
 		});
-
 		$('.validate-form .input100').each(function() {
 			$(this).focus(function() {
 				hideValidate(this);
 			});
 		});
-
 		function validate(input) {
 			if ($(input).val().trim() == '')
 				return false;
 		}
-
 		function showValidate(input) {
 			var thisAlert = $(input).parent();
-
 			$(thisAlert).addClass('alert-validate');
 		}
-
 		function hideValidate(input) {
 			var thisAlert = $(input).parent();
-
 			$(thisAlert).removeClass('alert-validate');
 		}
-
 		function Validate() {
 			var thisAlert = this.parent();
-
 			$(thisAlert).addClass('alert-validate');
 		}
 	});
@@ -142,6 +132,10 @@
 					<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
 						<form autocomplete="off" class="login100-form validate-form "
 							id="Form" action="PharmacistController" method="post">
+							<div class=" p-l-55 p-r-55 p-t-5 p-b-5 ">
+								<span class="login100-form-title"
+									style="font-size: 30px; color: crimson;">Issue Medicines</span><br />
+							</div>
 							<div class="wrap-input100 validate-input m-b-23"
 								data-validate="Enter a Valid Patient Id">
 								<span class="label-input100">Patient ID</span> <input
@@ -226,6 +220,8 @@
 					</div>
 					<c:if test="${patient.getStatus() == 'ACTIVE'}">
 						<div class="d-flex justify-content-center after">
+							<button class="btn btn-primary active" id="cancel">Back</button>
+							&ensp;
 							<button class="btn btn-primary active after" id="issue">Issue
 								Medicines</button>
 						</div>
@@ -235,6 +231,9 @@
 						<div class="d-flex justify-content-center after"
 							style="font-size: 25px;">
 							<strong>***Patient Discharged***</strong>
+						</div>
+						<div class="d-flex justify-content-center after p-t-20">
+							<button class="btn btn-primary active" id="cancel">Back</button>
 						</div>
 					</c:if>
 					<br>
