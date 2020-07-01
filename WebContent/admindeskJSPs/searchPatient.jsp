@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <link rel="icon" type="image/png"
-	href="CSS and JS/images/icons/home.ico" />
+	href="CSS and JS/images/icons/favicon.ico" />
 <link rel="stylesheet" type="text/css"
 	href="CSS and JS/vendor/bootstrap/css/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css"
@@ -203,19 +203,13 @@ $(document).ready(function() {
 						name="patient_age" maxLength="3" /> <span class="focus-input100"></span>
 				</div>
 
-
 				<div style="display: none;"
 					class="wrap-input100 validate-input m-b-23 before-id"
-					data-validate="Select a valid room Type" id="div2">
-					<span class="label-input100 ">Type Of Room</span> <select
-						id="type_of_room" name="type_of_room"
-						class="input100 form-control">
-						<option value="Single Room" selected>Single Room</option>
-						<option value="Semi-Sharing">Semi-Sharing</option>
-						<option value="General Ward">General Ward</option>
-					</select> <span class="focus-input100"></span>
+					data-validate="Select a valid room Type">
+					<span class="label-input100 ">Type Of Room</span> <input
+						class="input100 form-control" type="text" id="type_of_room"
+						name="type_of_room" /> <span class="focus-input100"></span>
 				</div>
-
 
 				<div style="display: none;"
 					class="wrap-input100 validate-input m-b-23 before-id"

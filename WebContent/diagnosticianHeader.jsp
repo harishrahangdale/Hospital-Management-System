@@ -1,4 +1,4 @@
-<%@page import="com.hms.beans.User"%>
+<%@page import="com.abc.beans.User"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -23,13 +23,11 @@
 		//SESSION CHECK (LOGGED IN OR NOT)  	
 	User user = (User) session.getAttribute("currentUser");
 	String __jspName = this.getClass().getSimpleName().replaceAll("_", ".");
-	
-	if ( user == null) {
+	if (user == null) {
 		response.sendRedirect("./index.jsp");
-	} else if ( user.getWorkGroup().contentEquals("cashier") && !(__jspName.contentEquals("Dashboard.jsp"))) {
+	} else if (user.getWorkGroup().contentEquals("cashier") && !(__jspName.contentEquals("Dashboard.jsp"))) {
 		response.sendRedirect("./Dashboard.jsp");
 	}
-	
 
 	//Back Button Cache Security
 	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");//HTTP 1.1
@@ -38,7 +36,7 @@
 	%>
 	<div class="bs-example">
 		<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-			<a href="#" class="navbar-brand" style="font-weight: bold;">R.A.N.K</a>
+			<a href="#" class="navbar-brand" style="font-weight: bold;">HMS-TCS</a>
 			<button type="button" class="navbar-toggler" data-toggle="collapse"
 				data-target="#navbarCollapse">
 				<span class="navbar-toggler-icon"></span>
@@ -46,61 +44,24 @@
 
 			<div class="collapse navbar-collapse" id="navbarCollapse">
 				<div class="navbar-nav btn-group">
-					<a href="ExecutiveController?action=Dashboard"
+					<a href="DiagnosticianController?action=Dashboard"
 						class="nav-item nav-link active">Home</a>
 
 				</div>
 				<div class="btn-group">
 					<button type="button" class="btn btn-primary dropdown-toggle"
 						data-toggle="dropdown"
-						style="background-color: #222831; border: 2px solid #222831;">Customer
-						Management</button>
+						style="background-color: #222831; border: 2px solid #222831;">Manage
+						Diagnostics Details</button>
 					<div class="dropdown-menu" style="background-color: #dddddd;">
-						<a href="ExecutiveController?action=createCustomer"
-							class="dropdown-item btn btn-outline-light">Create Customer</a>
-						<div class="dropdown-divider"></div>
-						<a href="ExecutiveController?action=updateCustomer"
-							class="dropdown-item btn btn-outline-light">Update Customer</a>
-						<div class="dropdown-divider"></div>
-						<a href="ExecutiveController?action=deleteCustomer"
-							class="dropdown-item btn btn-outline-light">Delete Customer</a>
-						<div class="dropdown-divider"></div>
-						<a href="ExecutiveController?action=customerStatus&currentPage=1"
-							class="dropdown-item btn btn-outline-light">View All Customer
-							Status</a>
+						<a href="DiagnosticianController?action=addDiagnostic"
+							class="dropdown-item btn btn-outline-light">Add Diagnostic
+							Test</a>
 					</div>
 				</div>
 
-				<div class="btn-group">
-					<button type="button" class="btn btn-primary dropdown-toggle"
-						data-toggle="dropdown"
-						style="background-color: #222831; border: 2px solid #222831;">Account
-						Management</button>
-					<div class="dropdown-menu" style="background-color: #dddddd">
-						<a href="ExecutiveController?action=createAccount"
-							class="dropdown-item btn btn-outline-light">Create Account</a>
-						<div class="dropdown-divider"></div>
-						<a href="ExecutiveController?action=deleteAccount"
-							class="dropdown-item btn btn-outline-light">Delete Account</a>
-						<div class="dropdown-divider"></div>
-						<a href="ExecutiveController?action=accountStatus&currentPage=1"
-							class="dropdown-item btn btn-outline-light">View All Account
-							Status</a>
-					</div>
-				</div>
-
-				<div class="btn-group">
-					<button type="button" class="btn btn-primary dropdown-toggle"
-						data-toggle="dropdown"
-						style="background-color: #222831; border: 2px solid #222831;">Search</button>
-					<div class="dropdown-menu" style="background-color: #dddddd">
-						<a href="ExecutiveController?action=viewCustomer"
-							class="dropdown-item  btn btn-outline-light">View Customer
-							Details</a>
-					</div>
-				</div>
 				<div class="navbar-nav btn-group">
-					<a href="ExecutiveController?action=about"
+					<a href="DiagnosticianController?action=about"
 						class="nav-item nav-link active">About</a>
 
 				</div>

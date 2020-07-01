@@ -1,4 +1,4 @@
-<%@page import="com.hms.beans.User"%>
+<%@page import="com.abc.beans.User"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -23,12 +23,11 @@
 		//SESSION CHECK (LOGGED IN OR NOT)  	
 	User user = (User) session.getAttribute("currentUser");
 	String __jspName = this.getClass().getSimpleName().replaceAll("_", ".");
-	if ( user == null) {
+	if (user == null) {
 		response.sendRedirect("./index.jsp");
-	} else if ( user.getWorkGroup().contentEquals("cashier") && !(__jspName.contentEquals("Dashboard.jsp"))) {
+	} else if (user.getWorkGroup().contentEquals("cashier") && !(__jspName.contentEquals("Dashboard.jsp"))) {
 		response.sendRedirect("./Dashboard.jsp");
 	}
-	
 
 	//Back Button Cache Security
 	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");//HTTP 1.1
@@ -52,7 +51,8 @@
 				<div class="btn-group">
 					<button type="button" class="btn btn-primary dropdown-toggle"
 						data-toggle="dropdown"
-						style="background-color: #222831; border: 2px solid #222831;">Manage Patient Details</button>
+						style="background-color: #222831; border: 2px solid #222831;">Manage
+						Patient Information</button>
 					<div class="dropdown-menu" style="background-color: #dddddd;">
 						<a href="AdminDeskController?action=createPatient"
 							class="dropdown-item btn btn-outline-light">Create Patient</a>
@@ -64,27 +64,31 @@
 							class="dropdown-item btn btn-outline-light">Delete Patient</a>
 						<div class="dropdown-divider"></div>
 						<a href="AdminDeskController?action=viewAllPatients&currentPage=1"
-							class="dropdown-item btn btn-outline-light">View All Patients</a>
+							class="dropdown-item btn btn-outline-light">View All Active
+							Patients</a>
 					</div>
 				</div>
 
 				<div class="btn-group">
 					<button type="button" class="btn btn-primary dropdown-toggle"
 						data-toggle="dropdown"
-						style="background-color: #222831; border: 2px solid #222831;">Online Search</button>
+						style="background-color: #222831; border: 2px solid #222831;">Online
+						Search</button>
 					<div class="dropdown-menu" style="background-color: #dddddd">
 						<a href="AdminDeskController?action=searchPatient"
-							class="dropdown-item btn btn-outline-light">Search for Patient</a>
+							class="dropdown-item btn btn-outline-light">Search for
+							Patient</a>
 					</div>
 				</div>
 
 				<div class="btn-group">
 					<button type="button" class="btn btn-primary dropdown-toggle"
 						data-toggle="dropdown"
-						style="background-color: #222831; border: 2px solid #222831;">Patient Billing</button>
+						style="background-color: #222831; border: 2px solid #222831;">Patient
+						Billing</button>
 					<div class="dropdown-menu" style="background-color: #dddddd">
-						<a href="AdminDeskController?action=findBilling"
-							class="dropdown-item  btn btn-outline-light">Find Billing</a>
+						<a href="AdminDeskController?action=finalBilling"
+							class="dropdown-item  btn btn-outline-light">Final Billing</a>
 					</div>
 				</div>
 				<div class="navbar-nav btn-group">

@@ -12,12 +12,12 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.hms.beans.Patient;
+import com.hms.beans.Test;
 import com.hms.beans.User;
-import com.hms.beans.Medicine;
-import com.hms.services.PharmacistServices;
+import com.hms.services.DiagnosticianService;
 
-@WebServlet(description = "pharmacist request reseiver", urlPatterns = { "/PharmacistController" })
-public class PharmacistController extends HttpServlet {
+@WebServlet("/DiagnosticianController")
+public class DiagnosticianController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -29,38 +29,37 @@ public class PharmacistController extends HttpServlet {
 			rd = request.getRequestDispatcher("index.jsp");
 			rd.forward(request, response);
 		}
-		if (currentUser != null && !currentUser.getWorkGroup().contentEquals("pharmacist")) {
+		if (currentUser != null && !currentUser.getWorkGroup().contentEquals("diagnostician")) {
 			rd = request.getRequestDispatcher("Dashboard.jsp");
 			rd.forward(request, response);
 		}
 		String action = "";
-		action = (String) request.getParameter("action");
-
+		action = request.getParameter("action");
 		switch (action) {
-		case "issueMedicines":
-			rd = request.getRequestDispatcher("pharmacistJSPs/issueMedicines.jsp");
+		case "addDiagnostic":
+			rd = request.getRequestDispatcher("diagnosticianJSPs/addDiagnostic.jsp");
 			rd.forward(request, response);
 			break;
+
 		case "about":
 			rd = request.getRequestDispatcher("about.jsp");
 			rd.forward(request, response);
 			break;
-
 		default:
 			rd = request.getRequestDispatcher("Dashboard.jsp");
 			rd.forward(request, response);
 			break;
 		}
+
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		RequestDispatcher rd;
 		String action = "";
-		action = (String) request.getParameter("action");
-
+		action = request.getParameter("action");
 		switch (action) {
-		case "issueMedicines":
+		case "addDiagnostic":
 			try {
 				String actionType = "";
 				actionType = (String) request.getParameter("actionType");
@@ -68,59 +67,54 @@ public class PharmacistController extends HttpServlet {
 				if (actionType.contentEquals("find")) {
 					Long patient_id = Long.parseLong(request.getParameter("patient_id"));
 					Patient patient = null;
-					List<Medicine> medicines_issued = null;
-					patient = PharmacistServices.getPatient(patient_id);
+					List<Test> tests = null;
+					patient = DiagnosticianService.getPatient(patient_id);
 					if (patient != null) {
-						medicines_issued = PharmacistServices.getAllMedicinesIssued(patient_id);
+						tests = DiagnosticianService.getAllTests(patient_id);
 						request.setAttribute("actionType", "show");
 						request.setAttribute("patient", patient);
-						request.setAttribute("medicines", medicines_issued);
+						request.setAttribute("tests", tests);
 						HttpSession session = request.getSession();
-						if (session.getAttribute("availableMedicines") == null) {
-							List<Medicine> availableMedicines = null;
-							availableMedicines = PharmacistServices.getAllMedicines();
-							session.setAttribute("availableMedicines", availableMedicines);
+						if (session.getAttribute("availableTests") == null) {
+							List<Test> availableTests = null;
+							availableTests = DiagnosticianService.getAllAvailableTests();
+							session.setAttribute("availableTests", availableTests);
 						}
 					} else {
 						request.setAttribute("actionType", "error");
 					}
-					rd = request.getRequestDispatcher("pharmacistJSPs/issueMedicines.jsp");
+					rd = request.getRequestDispatcher("diagnosticianJSPs/addDiagnostic.jsp");
 					rd.forward(request, response);
 				} else if (actionType.contentEquals("check")) {
 					Long patient_id = Long.parseLong(request.getParameter("patient_id"));
-					int medicineId = Integer.parseInt(request.getParameter("medicineId"));
-					int reqQuantity = Integer.parseInt(request.getParameter("quantity"));
-					int availableQuantity = PharmacistServices.checkAvailability(medicineId);
-					if (availableQuantity == 0) {
-						request.setAttribute("msg", "Medicine not available!");
-					} else if (availableQuantity - reqQuantity < 0) {
-						request.setAttribute("msg", "Only " + availableQuantity + " medicines available!");
-					} else {
-						if (PharmacistServices.addMedicine(patient_id, medicineId, reqQuantity)) {
+					int test_id = Integer.parseInt(request.getParameter("test_id"));
+					if (!DiagnosticianService.checkAlreadyTested(patient_id, test_id)) {
+						if (DiagnosticianService.addTest(patient_id, test_id)) {
 							request.setAttribute("msg", "success");
 						} else {
 							request.setAttribute("msg", "failed");
 						}
+					} else {
+						request.setAttribute("msg", "already");
 					}
 					Patient patient = null;
-					List<Medicine> medicines_issued = null;
+					List<Test> tests = null;
 
-					patient = PharmacistServices.getPatient(patient_id);
+					patient = DiagnosticianService.getPatient(patient_id);
 					if (patient != null) {
-						medicines_issued = PharmacistServices.getAllMedicinesIssued(patient_id);
+						tests = DiagnosticianService.getAllTests(patient_id);
 						request.setAttribute("actionType", "show");
 						request.setAttribute("patient", patient);
-						request.setAttribute("medicines", medicines_issued);
+						request.setAttribute("tests", tests);
 						HttpSession session = request.getSession();
-						if (session.getAttribute("availableMedicines") == null) {
-							List<Medicine> availableMedicines = null;
-							availableMedicines = PharmacistServices.getAllMedicines();
-							session.setAttribute("availableMedicines", availableMedicines);
+						if (session.getAttribute("availableTests") == null) {
+							List<Test> availableTests = null;
+							availableTests = DiagnosticianService.getAllAvailableTests();
+							session.setAttribute("availableTests", availableTests);
 						}
-						rd = request.getRequestDispatcher("pharmacistJSPs/issueMedicines.jsp");
+						rd = request.getRequestDispatcher("diagnosticianJSPs/addDiagnostic.jsp");
 						rd.forward(request, response);
 					}
-
 				}
 			} catch (Exception e) {
 			}
@@ -130,7 +124,6 @@ public class PharmacistController extends HttpServlet {
 			rd.forward(request, response);
 			break;
 		}
-
 	}
 
 }

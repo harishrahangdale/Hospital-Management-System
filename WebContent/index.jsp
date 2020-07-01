@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@page import="com.hms.beans.User"%>
+<%@page import="com.abc.beans.User"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +8,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="CSS and JS/image/png"
-	href="CSS and JS/images/icons/home.ico" />
+	href="CSS and JS/images/icons/favicon.ico" />
 <link rel="stylesheet" type="text/css"
 	href="CSS and JS/vendor/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css"
@@ -143,7 +143,7 @@
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-10 p-b-54"
 				style="opacity: 0.99;">
 				<span class="login100-form-title"
-					style="font-size: 40px; color: #A93226;">Hospital
+					style="font-size: 40px; color: #111d5e;">ABC Hospital
 					Management System</span>
 				<div class="login100-pic js-tilt " data-tilt>
 					<img src="CSS and JS/images/img-01.png" width="300" height="275"
@@ -152,7 +152,7 @@
 				<br> <br>
 				<form autocomplete="off" class="login100-form validate-form">
 					<span class="login100-form-title"
-						style="font-size: 28px; color: green;">LOGIN</span>
+						style="font-size: 28px; color: green;">Login</span>
 
 					<div class="wrap-input100 validate-input"
 						data-validate="Enter a Valid Username">
@@ -164,10 +164,10 @@
 					</div>
 					<div class="wrap-input100 validate-input"
 						data-validate="Enter a Valid Password">
-						<input class="input100" type="password" id="password" name="password"
-							placeholder="Password"> <span class="focus-input100"></span>
-						<span class="symbol-input100"> <i class="fa fa-lock"
-							aria-hidden="true"></i>
+						<input class="input100" type="password" id="password"
+							name="password" placeholder="Password"> <span
+							class="focus-input100"></span> <span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
 						</span>
 					</div>
 

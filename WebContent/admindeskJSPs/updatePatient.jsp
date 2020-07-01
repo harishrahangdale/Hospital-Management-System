@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <link rel="icon" type="image/png"
-	href="CSS and JS/images/icons/home.ico" />
+	href="CSS and JS/images/icons/favicon.ico" />
 <link rel="stylesheet" type="text/css"
 	href="CSS and JS/vendor/bootstrap/css/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css"
@@ -280,7 +280,8 @@ $(document).ready(function() {
 				</div>
 
 
-				<div style="display: none;" class="wrap-input100 validate-input m-b-23 before-id"
+				<div style="display: none;"
+					class="wrap-input100 validate-input m-b-23 before-id"
 					data-validate="Enter a Valid Address">
 					<span class="label-input100">Address</span>
 					<textarea name="address" id="address" class="input100 form-control"

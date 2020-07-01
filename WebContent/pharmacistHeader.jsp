@@ -1,4 +1,4 @@
-<%@page import="com.hms.beans.User"%>
+<%@page import="com.abc.beans.User"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>

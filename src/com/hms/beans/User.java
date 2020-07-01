@@ -1,7 +1,7 @@
 package com.hms.beans;
 
 public class User {
-	private String userName, password, workGroup,loginTime;
+	private String userName, password, workGroup, loginTime;
 	private int userId;
 
 	public User(String userName, String password, String work_group, int userId) {
@@ -49,7 +49,7 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
+
 	public String getLoginTime() {
 		return loginTime;
 	}

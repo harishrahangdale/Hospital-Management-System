@@ -1,4 +1,4 @@
-<%@page import="com.hms.beans.Patient"%>
+<%@page import="com.abc.beans.Patient"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -39,11 +39,11 @@
 		<c:choose>
 			<c:when test="${actionType =='show'}">
 
-				<div class="container my-4  p-t-30 p-b-30 "
+				<div class="container my-4  p-t-10 p-b-20 "
 					style="background-color: white;">
-					<div class=" p-l-55 p-r-55 p-t-60 p-b-5 ">
+					<div class=" p-l-55 p-r-55 p-t-30 p-b-0 ">
 						<span class="login100-form-title"
-							style="font-size: 30px; color: crimson;">Patients Status</span><br />
+							style="font-size: 28px; color: crimson;">Patients Details</span>
 					</div>
 					<div class="table-responsive">
 						<table class="table table-striped">
@@ -55,7 +55,7 @@
 									<th>Address</th>
 									<th>Date of Admission</th>
 									<th>Type of Room</th>
-									<th>View details </th>
+									<th>View details</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -64,7 +64,8 @@
 										<td>${patient.getPatient_id()}</td>
 										<td>${patient.getPatient_name()}</td>
 										<td>${patient.getPatient_age()}</td>
-										<td>${patient.getAddress()}, ${patient.getCity()}, ${patient.getState()}</td>
+										<td>${patient.getAddress()},${patient.getCity()},
+											${patient.getState()}</td>
 										<td>${patient.getPatient_date_of_admission()}</td>
 										<td>${patient.getType_of_room()}</td>
 										<td>

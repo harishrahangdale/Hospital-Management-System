@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Issue Medicines</title>
+<title>Add Diagnostic</title>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="icon" type="image/png"
@@ -30,22 +30,22 @@
 			if (msg == "success") {
 				swal({
 					title : "Success",
-					text : "Patient Medicine Updated Successfully",
+					text : "Diagnostic Added Successfully",
 					icon : "success",
 					button : "Okay",
 				})
 			} else if (msg == "failed") {
 				swal({
 					title : "Failed",
-					text : "Medicine Not Updated, Please Try Again!",
+					text : "Diagnostic Not Added, Please Try Again!",
 					icon : "error",
 					button : "Okay",
 				});
 			} else {
 				swal({
 					title : "Failed",
-					text : msg,
-					icon : "error",
+					text : "Patient already taken the Test",
+					icon : "warning",
 					button : "Okay",
 				});
 			}
@@ -134,14 +134,14 @@
 </head>
 <body
 	style="background-image: url('CSS and JS/images/other.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
-	<%@ include file="../pharmacistHeader.jsp"%>
+	<%@ include file="../diagnosticianHeader.jsp"%>
 	<div class="container-login100">
 		<c:choose>
 			<c:when test="${actionType !='show'}">
 				<div class="container-login100">
 					<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
 						<form autocomplete="off" class="login100-form validate-form "
-							id="Form" action="PharmacistController" method="post">
+							id="Form" action="DiagnosticianController" method="post">
 							<div class="wrap-input100 validate-input m-b-23"
 								data-validate="Enter a Valid Patient Id">
 								<span class="label-input100">Patient ID</span> <input
@@ -149,7 +149,7 @@
 									id="id" maxLength="9" name="patient_id"
 									placeholder="Enter the ID..." /> <span class="focus-input100"></span>
 							</div>
-							<input type="hidden" name="action" value="issueMedicines">
+							<input type="hidden" name="action" value="addDiagnostic">
 							<input type="hidden" name="actionType" value="find">
 						</form>
 						<div class="col-md-12 text-center after-id">
@@ -197,27 +197,24 @@
 					</div>
 					<div class=" p-l-55 p-r-55 p-t-5 p-b-5 ">
 						<span class="login100-form-title"
-							style="font-size: 30px; color: crimson;">Issued Medicines</span><br />
+							style="font-size: 30px; color: crimson;">Diagnostics
+							Conducted</span><br />
 					</div>
 					<div class="table-responsive">
 						<table class="table table-striped">
 							<thead>
 								<tr>
-									<th>Medicine ID</th>
-									<th>Medicine Name</th>
-									<th>Quantity</th>
-									<th>Rate</th>
+									<th>Test ID</th>
+									<th>Test Name</th>
 									<th>Amount</th>
 								</tr>
 							</thead>
 							<tbody>
-								<c:forEach items="${medicines}" var="medicine">
+								<c:forEach items="${tests}" var="test">
 									<tr>
-										<td>${medicine.getMedicineId()}</td>
-										<td>${medicine.getMedicineName()}</td>
-										<td>${medicine.getQuantityIssued()}</td>
-										<td>Rs.${medicine.getMedicinePrice()}</td>
-										<td>Rs.${medicine.getQuantityIssued() * medicine.getMedicinePrice()}</td>
+										<td>${test.getTest_id()}</td>
+										<td>${test.getTest_name()}</td>
+										<td>Rs.${test.getTest_charges()}</td>
 									</tr>
 								</c:forEach>
 							</tbody>
@@ -226,8 +223,8 @@
 					</div>
 					<c:if test="${patient.getStatus() == 'ACTIVE'}">
 						<div class="d-flex justify-content-center after">
-							<button class="btn btn-primary active after" id="issue">Issue
-								Medicines</button>
+							<button class="btn btn-primary active after" id="issue">Add
+								Diagnostic</button>
 						</div>
 					</c:if>
 
@@ -237,30 +234,25 @@
 							<strong>***Patient Discharged***</strong>
 						</div>
 					</c:if>
+
 					<br>
 					<form style="display: none;" autocomplete="off"
 						class="login100-form validate-form before" id="patientForm"
-						action="PharmacistController" method="post">
+						action="DiagnosticianController" method="post">
 						<div class="form-group row d-flex justify-content-center">
 							<div class=" validate-input m-b-23 col-sm-3"
 								data-validate="Select a valid room Type" id="div2">
-								<span class="label-input100 ">Medicine Name</span> <select
-									id="type_of_room" name="medicineId"
-									class="input100 form-control">
-									<c:forEach items="${availableMedicines}" var="medicine">
-										<option value="${medicine.getMedicineId()}">${medicine.getMedicineName()}</option>
+								<span class="label-input100 ">Diagnostic Name</span> <select
+									id="test_id" name="test_id" class="input100 form-control">
+									<c:forEach items="${availableTests}" var="test">
+										<option value="${test.getTest_id()}">${test.getTest_name()}</option>
 									</c:forEach>
 								</select>
 
 							</div>
-							<div class="col-sm-3 ">
-								<span class="label-input100">Quantity</span> <input
-									class="input100 form-control" type="text" name="quantity"
-									placeholder="Enter the Quantity..." value="1" />
-							</div>
 						</div>
 
-						<input type="hidden" name="action" value="issueMedicines" /> <input
+						<input type="hidden" name="action" value="addDiagnostic" /> <input
 							type="hidden" name="actionType" value="check" /> <input
 							type="hidden" name="patient_id"
 							value="${patient.getPatient_id() }" />
