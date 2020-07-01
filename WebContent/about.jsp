@@ -132,7 +132,7 @@ p {
         <p class="title">Developer</p>
         <p>DT20195543443</p>
         <p>hsr.29978@gmail.com</p>
-        <p><button class="button" onclick="location.href='https://www.linkedin.com/in/harishrahangdale/'">Contact</button></p>
+        <p><button class="button" onclick="window.open('https://www.linkedin.com/in/harishrahangdale/','_blank')">Contact</button></p>
       </div>
     </div>
   </div>
@@ -145,7 +145,7 @@ p {
         <p class="title">Developer</p>
         <p>DT20195556833</p>
         <p>bhavyapreeti99@gmail.com</p>
-        <p><button class="button" onclick="location.href='https://www.linkedin.com/in/bhavya99/'">Contact</button></p>
+        <p><button class="button" onclick="window.open('https://www.linkedin.com/in/bhavya99/','_blank')">Contact</button></p>
       </div>
     </div>
   </div>
@@ -160,7 +160,7 @@ p {
         <p class="title">Developer</p>
         <p>DT20195590416</p>
         <p>ruchhinagpal@gmail.com</p>
-        <p><button class="button" onclick="location.href='https://www.linkedin.com/in/ruchi-nagpal-1a58421aa/'">Contact</button></p>
+        <p><button class="button" onclick="window.open('https://www.linkedin.com/in/ruchi-nagpal-1a58421aa/','_blank')">Contact</button></p>
       </div>
     </div>
   </div>
@@ -173,7 +173,7 @@ p {
         <p class="title">Developer</p>
         <p>CT20172285431</p>
         <p>vandankarwa@gmail.com</p>
-        <p><button class="button" onclick="location.href='https://www.linkedin.com/in/vandan-karwa-b8739a169/'">Contact</button></p>
+        <p><button class="button" onclick="window.open('https://www.linkedin.com/in/vandan-karwa-b8739a169/','_blank')">Contact</button></p>
       </div>
     </div>
   </div>
