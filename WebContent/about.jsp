@@ -128,7 +128,7 @@ p {
     <div class="card">
       <img src="CSS and JS/images/male.png" alt="Harish Rahangdale" style="width:100%">
       <div class="container">
-        <h2>Bhavya Sinha</h2>
+        <h2>Bhavya Preeti</h2>
         <p class="title">Developer</p>
         <p>DT20195556833</p>
         <p>bhavyapreeti99@gmail.com</p>
