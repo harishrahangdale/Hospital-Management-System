@@ -126,7 +126,7 @@ p {
 <div class="row">
   <div class="column col align-self-center">
     <div class="card">
-      <img src="CSS and JS/images/male.png" alt="Harish Rahangdale" style="width:100%">
+      <img src="CSS and JS/images/female.png" alt="Bhavya Sinha" style="width:100%">
       <div class="container">
         <h2>Bhavya Sinha</h2>
         <p class="title">Developer</p>
@@ -139,7 +139,7 @@ p {
 
   <div class="column col align-self-center">
     <div class="card">
-      <img src="CSS and JS/images/female.png" alt="Bhavya" style="width:100%">
+      <img src="CSS and JS/images/female.png" alt="Ruchi Nagpal" style="width:100%">
       <div class="container">
         <h2>Ruchi Nagpal</h2>
         <p class="title">Developer</p>
@@ -154,7 +154,7 @@ p {
 <div class="row">
   <div class="column col align-self-center">
     <div class="card">
-      <img src="CSS and JS/images/female.png" alt="Ruchi Nagpal" style="width:100%">
+      <img src="CSS and JS/images/male.png" alt="Harish Rahangdale" style="width:100%">
       <div class="container">
         <h2>Harish Rahangdale</h2>
         <p class="title">Developer</p>
