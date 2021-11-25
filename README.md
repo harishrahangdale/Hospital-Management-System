@@ -8,10 +8,10 @@
   
 # Stakeholders-
 
-  Hospital administration staff\n
-    1) Registration/Admission desk executive\n
-    2) Pharmacist\n
-    3) Diagnostic services executive\n
+  Hospital administration staff
+    1) Registration/Admission desk executive
+    2) Pharmacist
+    3) Diagnostic services executive
   
 # Scope-
   
