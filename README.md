@@ -1,18 +1,17 @@
 # Hospital-Management-System
 
-  Key requirements of the system is the ability to register patient, update, delete, discharge, manage the diagnostics and pharmacy for billing.
 
 # Business Overview-
 
-  Hospital management System is one of the most widely used application management functions in medical field and health systems. This document specifies requirements, in a way, where in terms of both hospital admin staff and Patients, there will be distinct set of functions. These should be made available through well-defined User Interface. 
-  <ABC> Hospital is a corporate hospital which serves Patients, treating for various diseases through in-Patients . Key requirements of the system is the ability to register Patient, update and delete (discharge) Patient, manage the diagnostics and pharmacy for billing. Also, to be able to view Patient information and get the complete billing information.
+  Hospital management System is one of the most widely used application management functions in medical field and health systems.
+  ABC Hospital is a corporate hospital which serves Patients, treating for various diseases through in-Patients . Key requirements of the system is the ability to register Patient, update and delete (discharge) Patient, manage the diagnostics and pharmacy for billing. Also, to be able to view Patient information and get the complete billing information.
   
 # Stakeholders-
 
-  Hospital administration staff
-    1) Registration/Admission desk executive
-    2) Pharmacist
-    3) Diagnostic services executive
+  Hospital administration staff\n
+    1) Registration/Admission desk executive\n
+    2) Pharmacist\n
+    3) Diagnostic services executive\n
   
 # Scope-
   
