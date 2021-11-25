@@ -21,6 +21,8 @@ Stakeholders-
 Scope-
   The System needs to be able to handle primary functions that can be grouped into three set
   of activities, with detailed requirement of each group explained in the requirement section.
+
+  ![Alt text](/Screenshots/Home-min.png?raw=true "Home Page")
   
   Registration/Admission desk executive
     • Create, Update, Delete Patient
